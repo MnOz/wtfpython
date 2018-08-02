@@ -1162,7 +1162,7 @@ I've lost faith in truth!
 ```
 #### 解释
 
-- 最初，Python 没有 `bool` 类型(人们用 `0` 表示 `false`，非 `0` 表示 `true`)。后来才增加了 `True`, `False`，还有 `bool` 类型。单位了向后兼容，不能创建 `True` 和 `False` 常量 - 它们只是内置变量。
+- 最初，Python 没有 `bool` 类型(人们用 `0` 表示 `false`，非 `0` 表示 `true`)。后来才增加了 `True`, `False`，还有 `bool` 类型。但为了向后兼容，不能创建 `True` 和 `False` 常量 - 它们只是内置变量。
 - Python 3 是后向不兼容的，所以现在终于可以解决这个问题了，所以这个例子不适用于Python 3.x！
 
 ---
@@ -1215,7 +1215,7 @@ False
 - 在 Python 中，继承关系不一定是传递的。任何人都可以在元类(metaclass) 中定义自己的任意的 `__subclasscheck__`。
 - 当调用 `issubclass（cls，Hashable）` 时，它只是在 `cls` 或者它所继承的任何东西中寻找 `non-Falsey` 的 `__hash__` 方法。
 - 由于 `object` 是可哈希的，而 `list` 是不可哈希的，所以它打破了传递关系。
-- 更详细的解释可以在[这里]22]找到
+- 更详细的解释可以在[这里][22]找到
 
 
 ---
